@@ -2,7 +2,6 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-
 <title>Uygulamalarım</title>
 
 <style>
@@ -10,9 +9,7 @@ body {
   margin: 0;
   font-family: Arial;
   color: white;
-  text-align: center;
 
-  /* ANİMASYONLU ARKA PLAN */
   background: linear-gradient(270deg, #0f2027, #2c5364, #00ff88);
   background-size: 600% 600%;
   animation: bgAnim 10s ease infinite;
@@ -24,46 +21,75 @@ body {
   100% { background-position: 0% 50%; }
 }
 
-h1 {
-  margin-top: 50px;
-  font-size: 40px;
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(10px);
+}
 
-  /* PARLAYAN YAZI */
-  text-shadow: 0 0 10px #00ff88, 0 0 20px #00ff88;
+.navbar h2 {
+  margin: 0;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #00ff88;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.hero h1 {
+  font-size: 50px;
+  text-shadow: 0 0 15px #00ff88;
+}
+
+.hero p {
+  color: #ccc;
+}
+
+/* CARD */
+.container {
+  text-align: center;
+  margin-top: 60px;
 }
 
 .card {
-  margin-top: 100px;
-  background: rgba(34, 34, 34, 0.8);
+  background: rgba(34,34,34,0.8);
   padding: 30px;
-  display: inline-block;
   border-radius: 20px;
-
-  /* GLASS EFFECT */
+  display: inline-block;
   backdrop-filter: blur(10px);
-
-  /* HAFİF PARLAMA */
   box-shadow: 0 0 20px rgba(0,255,136,0.3);
-
   transition: 0.3s;
 }
 
 .card:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 30px rgba(0,255,136,0.6);
 }
 
 button {
+  margin-top: 15px;
   padding: 12px 25px;
-  font-size: 16px;
   border: none;
   border-radius: 10px;
   cursor: pointer;
 
-  /* GRADIENT BUTON */
   background: linear-gradient(45deg, #00ff88, #00c3ff);
   color: black;
-
+  font-weight: bold;
   transition: 0.3s;
 }
 
@@ -71,20 +97,51 @@ button:hover {
   transform: scale(1.1);
   box-shadow: 0 0 15px #00ff88;
 }
+
+/* FOOTER */
+.footer {
+  margin-top: 100px;
+  padding: 20px;
+  text-align: center;
+  background: rgba(0,0,0,0.4);
+  color: #aaa;
+}
 </style>
 </head>
 
 <body>
 
-<h1>🚀 Uygulamalarım</h1>
+<!-- NAVBAR -->
+<div class="navbar">
+  <h2>🚀 Ahmet Apps</h2>
+  <div>
+    <a href="#">Ana Sayfa</a>
+    <a href="#">Uygulamalar</a>
+    <a href="#">İletişim</a>
+  </div>
+</div>
 
-<div class="card">
-  <h2>Minecraft Tools App V1</h2>
-  <p>mc web panel</p>
+<!-- HERO -->
+<div class="hero">
+  <h1>Uygulamalarım</h1>
+  <p>Kendi geliştirdiğim projeler burada 👇</p>
+</div>
 
-  <a href="https://github.com/ahmet9867/ahmet9867.github.io/releases/download/v1.0/Minecraft.Tools.App.Setup.1.0.0.exe">
-    <button>İndir</button>
-  </a>
+<!-- APP CARD -->
+<div class="container">
+  <div class="card">
+    <h2>Minecraft Tools App V1</h2>
+    <p>mc web panel</p>
+
+    <a href="https://github.com/ahmet9867/ahmet9867.github.io/releases/download/v1.0/Minecraft.Tools.App.Setup.1.0.0.exe">
+      <button>İndir</button>
+    </a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  © 2026 Ahmet - Tüm hakları saklıdır
 </div>
 
 </body>
